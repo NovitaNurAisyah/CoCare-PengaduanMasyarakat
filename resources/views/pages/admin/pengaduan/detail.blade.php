@@ -45,11 +45,11 @@ Detail Pengaduan
         <div class="px-4 py-3 mb-8 flex text-gray-800 bg-white rounded-lg shadow-md dark:bg-gray-800">
           <div class="relative hidden mr-3  md:block dark:text-gray-400">
             <h1 class="text-center mb-8 font-semibold">Foto</h1>
-            <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" />
+            <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" style="max-width: 100%"/>
           </div>
           <div class="text-center flex-1 dark:text-gray-400">
             <h1 class="mb-8 font-semibold">Keterangan</h1>
-            <p class="text-gray-800 dark:text-gray-400">
+            <p class="text-gray-800 dark:text-gray-400 ">
               {{ $item->description}}
             </p>
           </div>
@@ -72,13 +72,13 @@ Detail Pengaduan
       </div>
       <div class="flex justify-center my-4">
         <a href="{{ url('admin/pengaduan/cetak', $item->id)}}"
-          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-lg active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-red">
           Export ke PDF
         </a>
       </div>
       <div class="flex justify-center my-6">
         <a href="{{ route('tanggapan.show', $item->id)}}"
-          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+          class="px-5 py-3 font-medium leading-5 text-white transition-colors duration-150 bg-teal-600 border border-transparent rounded-lg active:bg-teal-600 hover:bg-teal-700 focus:outline-none focus:shadow-outline-teal">
           Berikan Tanggapan
         </a>
       </div>

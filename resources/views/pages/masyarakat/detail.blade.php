@@ -4,7 +4,7 @@
 Data Pengaduan
 @endsection
 @section('content')
-<main class="h-full pb-16 overflow-y-auto">
+<main class="h-full pb-16 overflow-y-auto dark:bg-gray-700 bg-blue-200">
   <div class="container grid px-6 mx-auto">
     <h2 class="my-6 text-2xl font-semibold text-gray-700 dark:text-gray-200">
       Data Pengaduan
@@ -37,8 +37,8 @@ Data Pengaduan
               <td class="px-4 py-3">
                 <div class="flex items-center text-sm">
                   <!-- Avatar with inset shadow -->
-                  <div class="relative hidden mr-3  md:block">
-                    <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" />
+                  <div class="relative hidden mr-3  md:block" >
+                    <img class=" h-32 w-35 " src="{{ asset('storage/' . $item->image) }}" alt="" loading="lazy" style="max-width: 100%" />
                   </div>
                 </div>
               </td>
@@ -70,7 +70,7 @@ Data Pengaduan
               @endif
               <td>
                 <a href="{{ route('pengaduan.show', $item->id)}} "
-                  class="flex items-center justify-between  text-sm font-medium leading-5 text-purple-600 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
+                  class="flex items-center justify-between  text-sm font-medium leading-5 text-red-500 rounded-lg dark:text-gray-400 focus:outline-none focus:shadow-outline-gray"
                   aria-label="Detail">
 
                   <svg class="w-5 h-5" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">

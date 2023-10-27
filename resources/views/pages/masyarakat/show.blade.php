@@ -5,7 +5,7 @@ Dashboard
 @endsection
 
 @section('content')
-<main class="h-full pb-16 overflow-y-auto">
+<main class="h-full pb-16 overflow-y-auto bg-blue-200 dark:bg-gray-700">
   <div class="container grid px-6 mx-auto">
     <h2 class="my-6 text-2xl font-semibold text-center text-gray-700 dark:text-gray-200">
       Detail Pengaduan
@@ -42,14 +42,14 @@ Dashboard
           </h2>
         </div>
 
-        <div class="px-4 py-3 mb-8 flex text-gray-800 bg-white rounded-lg shadow-md dark:bg-gray-800">
+        <div class="px-4 py-3 mb-8 flex text-gray-800 bg-white rounded-lg shadow-md dark:bg-gray-800 ">
           <div class="relative hidden mr-3  md:block ">
-            <h1 class="text-center mb-8 font-semibold">Foto</h1>
-            <img class=" h-32 w-35 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" />
+            <h1 class="text-center mb-8 font-semibold dark:text-gray-400">Foto</h1>
+            <img class=" h-32 w-37 " src="{{ Storage::url($item->image) }}" alt="" loading="lazy" />
           </div>
           <div class="text-center flex-1 dark:text-gray-400">
             <h1 class="mb-8 font-semibold">Keterangan</h1>
-            <p class="text-gray-800 dark:text-gray-400">
+            <p class="text-gray-800 dark:text-gray-400 center-vertically">
               {{ $item->description}}
             </p>
           </div>

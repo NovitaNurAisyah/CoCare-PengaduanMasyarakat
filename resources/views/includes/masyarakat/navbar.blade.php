@@ -1,7 +1,21 @@
-<header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
-  <div class="container flex items-center justify-end h-full px-6 mx-auto text-purple-600 dark:text-purple-300">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CoCare | Complaint Care</title>
+
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="icon" href="{{ asset('img/care.png')}}">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<header class="z-10 py-4 bg-blue-400 shadow-md dark:bg-gray-800">
+  <div class="container flex items-center justify-end h-full px-6 mx-auto text-white dark:white">
     <!-- Mobile hamburger -->
-    <button class=" p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-purple"
+    <button class=" p-1 mr-5 -ml-1 rounded-md md:hidden focus:outline-none focus:shadow-outline-blue-200"
       @click="toggleSideMenu" aria-label="Menu">
       <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
         <path fill-rule="evenodd"
@@ -58,7 +72,7 @@
     <ul class="flex items-center flex-shrink-2 space-x-6">
       <!-- Theme toggler -->
       <li class="flex">
-        <button class="rounded-md focus:outline-none focus:shadow-outline-purple" @click="toggleTheme"
+        <button class="rounded-md focus:outline-none focus:shadow-outline-blue-200" @click="toggleTheme"
           aria-label="Toggle color mode">
           <template x-if="!dark">
             <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
@@ -79,7 +93,7 @@
       </li>
       <!-- Profile menu -->
       <li class="relative">
-        <button class="align-middle rounded-full focus:shadow-outline-purple focus:outline-none"
+        <button class="align-middle rounded-full focus:shadow-outline-blue-200 focus:outline-none"
           @click="toggleProfileMenu" @keydown.escape="closeProfileMenu" aria-label="Account" aria-haspopup="true">
           <img class="object-cover w-8 h-8 rounded-full" src="https://ui-avatars.com/api/?background=fff&color=121317&name={{ Auth::user()->name }}"
             alt="" aria-hidden="true" />
